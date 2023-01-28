@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbeit</title>
+</head>
+<body>
+    <p id="nummer" style="font-weight:700; font-size:75px ; text-align:center;"></p>
+    <input type="number" id="antwort">
+    <button onclick="antwort()">submit</button>
+    <p id="sum"></p>
+    <p id="result"></p>
+    <p id="idk"></p>
+    <script>
+        count_of_numbers = 0
+        sum = 0
+        score = 0
+        Question_nr = 0
+        setInterval(numbers,1000)
+        function numbers()
+        {
+            if(count_of_numbers<10)
+            {
+                random = Math.floor(Math.random()*10)
+                document.getElementById("nummer").innerHTML = random
+                count_of_numbers ++
+                sum =sum + random 
+            }
+
+        }    
+        function antwort()
+        {
+            input_answer = document.getElementById("antwort").value
+            document.getElementById("result").innerHTML= input_answer
+            document.getElementById("result").innerHTML = sum
+            if(input_anwer ==sum)
+            {
+                document.getElementById("idk").innerHTML = "right"
+            }
+            else
+            {
+                document.getElementById("final").innerHTML = "wrong"
+
+            }
+        }
+        
+    </script>
+  
+    
+</body>
+</html>
